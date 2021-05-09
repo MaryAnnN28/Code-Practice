@@ -1,9 +1,15 @@
 // Some Method  .some()
 
-// - The .some() method tests whether at least one element in the array 
-//   passes the test implement by the provided function. 
-// - It returns true if, in the array, it finds an element for which 
-//   the provided function returns true; otherwise it returns false; 
+// - The .some() method tests whether at least ONE element in the array 
+//   that passes the condition, return true or false as appropriate. 
 
 
-const someResult = temperatures.some(temperature => temperature > 80)
+const temperatures = [
+  { degrees: 69, isRecordTemp: false }, 
+  { degrees: 82, isRecordTemp: true }, 
+  { degrees: 73, isRecordTemp: false }, 
+  { degrees: 64, isRecordTemp: false }
+];
+
+const result = temperatures.some(temperature => temperature.isRecordTemp === true);
+console.log(result);  // true 

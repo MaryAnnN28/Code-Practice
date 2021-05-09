@@ -17,4 +17,12 @@ const restaurants = [
 
 //  .startsWith is a string method 
 const results = restaurants.filter(restaurant => restaurant.name.startsWith('C'))
-console.log(results); 
+console.log(results);
+
+
+// Finds a restaurant that starts with the letter 'C', AND is less than 3 miles away 
+
+const resultsLessThan2Miles = restaurants.filter(restaurant => restaurant.name.startsWith('C') && restaurant.milesAway < 3)
+console.log(resultsLessThan2Miles);
+
+// Finds a single restaurant that starts with 'C', AND less than 2 miles away 
